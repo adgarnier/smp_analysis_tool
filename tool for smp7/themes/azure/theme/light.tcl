@@ -4,11 +4,11 @@
 
 package require Tk 8.6
 
-namespace eval ttk::theme::azure-dark {
+namespace eval ttk::theme::azure-light {
     variable version 2.0
-    package provide ttk::theme::azure-dark $version
+    package provide ttk::theme::azure-light $version
 
-    ttk::style theme create azure-dark -parent clam -settings {
+    ttk::style theme create azure-light -parent clam -settings {
         proc load_images {imgdir} {
             variable I
             foreach file [glob -directory $imgdir *.png] {
@@ -17,13 +17,13 @@ namespace eval ttk::theme::azure-dark {
             }
         }
 
-        load_images [file join [file dirname [info script]] dark]
-
+        load_images [file join [file dirname [info script]] light]
+        
         array set colors {
-            -fg             "#ffffff"
-            -bg             "#333333"
-            -disabledfg     "#aaaaaa"
-            -disabledbg     "#737373"
+            -fg             "#880808"
+            -bg             "#880808"
+            -disabledfg     "#737373"
+            -disabledbg     "#ffffff"
             -selectfg       "#ffffff"
             -selectbg       "#007fff"
         }
@@ -127,7 +127,7 @@ namespace eval ttk::theme::azure-dark {
                 Combobox.arrow -sticky nsew
             }
         }
-
+        
         ttk::style layout TSpinbox {
             Spinbox.field -sticky nsew -children {
                 Spinbox.padding -expand true -sticky nswe -children {
@@ -142,7 +142,7 @@ namespace eval ttk::theme::azure-dark {
                 }
             }
         }
-
+        
         ttk::style layout Horizontal.TSeparator {
             Horizontal.separator -sticky nswe
         }
@@ -203,8 +203,8 @@ namespace eval ttk::theme::azure-dark {
             [list $I(rect-basic) \
             	{selected disabled} $I(rect-basic) \
                 disabled $I(rect-basic) \
-                pressed $I(rect-basic) \
                 selected $I(rect-basic) \
+                pressed $I(rect-basic) \
                 active $I(button-hover) \
                 focus $I(button-hover) \
             ] -border 4 -sticky ewns
@@ -216,8 +216,8 @@ namespace eval ttk::theme::azure-dark {
             [list $I(empty) \
             	{selected disabled} $I(empty) \
                 disabled $I(empty) \
-                pressed $I(rect-basic) \
                 selected $I(rect-basic) \
+                pressed $I(rect-basic) \
                 active $I(rect-basic) \
             ] -border 4 -sticky ewns
 
@@ -262,8 +262,8 @@ namespace eval ttk::theme::azure-dark {
             [list $I(rect-accent) \
             	{selected disabled} $I(rect-accent-hover) \
                 disabled $I(rect-accent-hover) \
-                pressed $I(rect-accent) \
                 selected $I(rect-accent) \
+                pressed $I(rect-accent) \
                 active $I(rect-accent-hover) \
                 focus $I(rect-accent-hover) \
             ] -border 4 -sticky ewns
@@ -291,11 +291,11 @@ namespace eval ttk::theme::azure-dark {
             [list $I(off-basic) \
                 {selected disabled} $I(on-basic) \
                 disabled $I(off-basic) \
-                {pressed selected} $I(on-accent) \
-                {active selected} $I(on-accent) \
+                {pressed selected} $I(on-hover) \
+                {active selected} $I(on-hover) \
                 selected $I(on-accent) \
-                {pressed !selected} $I(off-basic) \
-                active $I(off-basic) \
+                {pressed !selected} $I(off-hover) \
+                active $I(off-hover) \
             ] -width 46 -sticky w
 
         # ToggleButton
@@ -394,10 +394,10 @@ namespace eval ttk::theme::azure-dark {
             ] -sticky {}
 
         # Progressbar
-        ttk::style element create Horizontal.Progressbar.trough image $I(hor-basic) \
+        ttk::style element create Horizontal.Progressbar.trough image $I(hor-basic_edit) \
             -sticky ew
 
-        ttk::style element create Horizontal.Progressbar.pbar image $I(hor-accent) \
+        ttk::style element create Horizontal.Progressbar.pbar image $I(hor-accent_edit) \
             -sticky ew
 
         ttk::style element create Vertical.Progressbar.trough image $I(vert-basic) \
@@ -443,14 +443,14 @@ namespace eval ttk::theme::azure-dark {
                 focus $I(box-accent) \
                 hover $I(box-hover) \
             ] -border 5 -padding {8}
-            
+
         ttk::style element create Combobox.button \
             image [list $I(combo-button-basic) \
                  {!readonly focus} $I(combo-button-focus) \
                  {readonly focus} $I(combo-button-hover) \
                  {readonly hover} $I(combo-button-hover)
             ] -border 5 -padding {2 6 6 6}
-
+            
         ttk::style element create Combobox.arrow image $I(down) \
             -width 15 -sticky e
 
@@ -492,7 +492,7 @@ namespace eval ttk::theme::azure-dark {
         ttk::style element create Horizontal.separator image $I(separator)
 
         ttk::style element create Vertical.separator image $I(separator)
-        
+
         # Card
         ttk::style element create Card.field image $I(card) \
             -border 10 -padding 4 -sticky news
@@ -529,8 +529,8 @@ namespace eval ttk::theme::azure-dark {
         ttk::style configure Treeview -background $colors(-bg)
         ttk::style configure Treeview.Item -padding {2 0 0 0}
         ttk::style map Treeview \
-            -background [list selected $colors(-selectbg)] \
-            -foreground [list selected $colors(-selectfg)]
+            -background [list selected #ccc] \
+            -foreground [list selected $colors(-fg)]
 
         # Panedwindow
         # Insane hack to remove clam's ugly sash
