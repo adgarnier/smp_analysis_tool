@@ -86,9 +86,9 @@ def signing_statements():
             time.sleep(1)
             pyautogui.keyDown('shift')
             pyautogui.press('tab', presses = 3)
-            time.sleep(1)
-            pyautogui.press('tab', presses = 1)
             pyautogui.keyUp('shift')
+            time.sleep(1)
+            pyautogui.press('tab', presses = 8)
             time.sleep(1)
             pyautogui.press('enter')
             time.sleep(1)
@@ -111,7 +111,7 @@ def signing_statements():
                 time.sleep(1)
                 logging.info(f'Waiting {n+1}/2 seconds')
             pyautogui.press('enter')
-            time.sleep(1)
+            time.sleep(4)
 
             # check if tmp_password is correct
             if find_window_by_title('Sign Statement'):

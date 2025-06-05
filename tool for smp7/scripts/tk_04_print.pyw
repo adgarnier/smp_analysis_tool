@@ -88,10 +88,10 @@ def printing_plates():
             pyautogui.press('tab')
             time.sleep(2)
             pyautogui.press('enter')
-            # logging.info('Waiting 13 seconds for printing')
-            # for n in range (13):
-            #     logging.info(f'{n+1}/13 seconds...')
-            #     time.sleep(1)
+            logging.info('Waiting 13 seconds for printing')
+            for n in range (13):
+                logging.info(f'{n+1}/13 seconds...')
+                time.sleep(1)
             wait_for_window(smp, timeout=30)
             logging.info(f'Plate {x+1} sent to printer.')
             break

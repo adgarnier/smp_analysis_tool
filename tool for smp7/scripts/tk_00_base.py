@@ -105,8 +105,9 @@ def window_focus(window_title):
 def setting_tab():
     logging.info('Setting tab...')
     pyautogui.press(['alt', 'v', 'n'])
-    time.sleep(0.1)
+    time.sleep(0.5)
     pyautogui.press(['alt', 'v', 'o'])
+    time.sleep(0.5)
     for n in range (8):
         pyautogui.press('left')
         logging.info(f'{n+1} left')
@@ -120,7 +121,7 @@ def setting_tab():
     pyautogui.press('left')
     time.sleep(1)
     pyautogui.press(['alt', 'v', 'n'])
-    time.sleep(0.1)
+    time.sleep(0.5)
     pyautogui.press(['alt', 'v', 'x'])
     time.sleep(2)
     logging.info('tab set to whole area')

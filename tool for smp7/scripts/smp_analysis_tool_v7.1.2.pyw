@@ -60,7 +60,7 @@ class Application(tk.Frame):
         self.user = os.getlogin()
 
         self.buttons = [self.start_button, self.open_button, self.export_button, self.sign_button, \
-                   self.cycle_button, self.save_button, self.mask_button, self.full_button]
+                   self.cycle_button, self.save_button, self.mask_button, self.full_button, self.rawdata_button]
 
     # took out self.rawdata_button
     
@@ -166,8 +166,8 @@ class Application(tk.Frame):
         self.cycle_button = tk.Button(frame_col0_bottom, text="Cycle", command=self.cycle, width=button_width)
         self.cycle_button.pack(padx=10, pady=10, fill="x")
         
-        # self.rawdata_button = tk.Button(frame_col0_bottom, text="Raw Data", command=self.rawdata, width=button_width)
-        # self.rawdata_button.pack(padx=10, pady=10, fill="x")
+        self.rawdata_button = tk.Button(frame_col0_bottom, text="Raw Data", command=self.rawdata, width=button_width)
+        self.rawdata_button.pack(padx=10, pady=10, fill="x")
 
         # Save section inside frame_col2_bottom
         self.save_button = tk.Button(frame_col1_bottom, text="Save", command=self.save, width=button_width)
@@ -589,7 +589,7 @@ class Application(tk.Frame):
     
     def init_script(self):
         self.task = 'Initialization'
-        self._run_script("tk_initialization.pyw")
+        self._run_script("tk_initialization.py")
     
     def _run_script(self, script_name):
         # global running_script
