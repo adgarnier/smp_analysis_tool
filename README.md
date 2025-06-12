@@ -6,19 +6,6 @@
 It includes functionalities like starting the analysis, opening files, exporting data, signing plates, cycling through plates, saving data, masking wells, and running a sequence of tasks automatically.
 There are versions available for SMP 6.5.2 and SMP 7.1.2
 
-## ✨ Features
-
-- **🚀 Start**: Initializes the SoftMax Pro software.
-- **📂 Open**: Opens the specified number of plates.
-- **📤 Export**: Exports plate data to Excel, LIMS, or PnPS.
-- **📝 Sign**: Signs the plates and submits them for approval.
-- **🔄 Cycle**: Cycles through the plates without making changes.
-- **💾 Save**: Saves the plates.
-- **🎭 Mask**: Masks specified wells in the plates.
-- **🔧 Full**: Runs a sequence of selected tasks automatically.
-- **🛑 Abort**: Aborts the running task.
-- **❓ Help**: Provides information on how to use the tool.
-
 ## 🛠 Prerequisites
 
 - Python 3.x
@@ -56,6 +43,7 @@ There are versions available for SMP 6.5.2 and SMP 7.1.2
         - **Open**: Open the specified number of plates.
         - **Export**: Export plate data.
         - **Sign**: Sign and submit plates.
+        - **Print**: Prints the plates.
         - **Cycle**: Cycle through plates.
         - **Save**: Save plate data.
         - **Mask**: Mask specified wells.
