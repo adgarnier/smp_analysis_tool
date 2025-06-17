@@ -54,7 +54,10 @@ There are versions available for SMP 6.5.2 and SMP 7.1.2
     - **Select Folder**: Select the folder where exported data will be saved.
     - **Progress Bar**: Displays the progress of the running task.
 
-![image](https://github.com/user-attachments/assets/3d11e839-d98d-4a5a-9538-109f872bc51a)
+<img src="https://github.com/user-attachments/assets/3d11e839-d98d-4a5a-9538-109f872bc51a" width="100">
+![image](https://github.com/user-attachments/assets/3d11e839-d98d-4a5a-9538-109f872bc51a)| width=100
+![image](https://github.com/user-attachments/assets/3d11e839-d98d-4a5a-9538-109f872bc51a| width=100)
+
 
 ## ⚙️ Configuration
 
