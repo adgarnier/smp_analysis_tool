@@ -16,13 +16,14 @@ There are versions available for SMP 6.5.2 and SMP 7.1.2
 
 ## 📥 Installation
 
-1. **Clone the repository**:
-   git clone https://github.com/yourusername/smp-analysis-tool.git cd smp-analysis-tool
+1. **Clone or download the repository**:
+   git clone https://github.com/yourusername/smp-analysis-tool.git cd smp-analysis-tool or
+   Download ZIP, unzip.
 
-2. **Install the required packages**:
+3. **Install the required packages**:
    pip install pyautogui pywin32
 
-3. **Ensure the necessary directories and files are in place**:
+4. **Ensure the necessary directories and files are in place**:
 
     - `images/IMG_4666.png`
     - `themes/azure/azure.tcl`
@@ -52,6 +53,8 @@ There are versions available for SMP 6.5.2 and SMP 7.1.2
         - **Help**: Display information about tool usage.
     - **Select Folder**: Select the folder where exported data will be saved.
     - **Progress Bar**: Displays the progress of the running task.
+
+![image](https://github.com/user-attachments/assets/3d11e839-d98d-4a5a-9538-109f872bc51a)
 
 ## ⚙️ Configuration
 
